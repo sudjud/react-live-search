@@ -1,0 +1,104 @@
+.app
+  display: flex
+  flex-direction: column
+  align-items: center
+  
+.card
+  padding: 20px
+  display: flex
+  flex-direction: column
+  width: 400px
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  border-radius: 0 0 15px 15px
+  &__wrapper
+    padding: 15px 15px 35px 15px
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    border-radius: 0 0 10px 10px 
+    position: relative
+  &__hr
+    width: 100%
+    height: 1px
+    background-color: rgba(black, 0.2)
+    margin-top: 25px
+    margin-bottom: 15px
+  &__img
+    img
+      width: 100%
+      height: 330px
+      object-fit: cover
+  &__main
+    display: flex
+    justify-content: space-between
+    font-size: 22px
+    align-items: center
+    &_left
+      display: flex
+      flex-direction: column
+      b:first-child
+        margin-bottom: 15px
+    &_right
+      padding: 3px 15px
+      border: 1px solid blue
+      color: blue
+      cursor: pointer
+      border-radius: 5px
+  &__details
+    position: relative
+    &_roll-out
+      position: absolute
+      width: 250px
+      left: 360px
+      background-color: #CAEBF8
+      z-index: 100
+
+      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+      padding: 15px 0px 15px 15px
+      border-radius: 10px
+      font-size: 18px
+    &_close
+      position: absolute
+      right: 20px
+      top: 0
+      cursor: pointer
+      color: red
+  &__desc
+    font-size: 18px
+    margin-bottom: 20px
+  &__buy
+    padding: 6px 15px
+    font-size: 18px
+    color: white
+    background-color: #219B39
+    display: inline
+    border-radius: 5px
+    cursor: pointer
+    &_disable
+      background-color: rgba(#219B39, 0.45)
+      cursor: not-allowed
+  &__remove-from
+    position: absolute
+    margin-top: 10px
+    left: 18px
+    color: red
+    cursor: pointer
+    &:hover
+      text-decoration: underline
+
+
+.cards
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+
+input[type="text"]
+  padding: 10px 20px
+  width: 400px
+  font-size: 17px
+
+input[type="submit"]
+  padding: 13px 20px
+  background-color: blue
+  color: white
